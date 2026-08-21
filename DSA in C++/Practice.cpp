@@ -1,20 +1,35 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
-void sort01245(std::vector<int>& arr) {
-    std::sort(arr.begin(), arr.end());
-}
+int main()
+{
 
-int main() {
-    std::vector<int> arr = {0, 1, 2, 0, 1, 2, 1, 0, 4, 5, 5, 5, 4};
+    std::queue<int> myQueue;
+    myQueue.push(10);
+    myQueue.push(20);
+    myQueue.push(30);
 
-    sort01245(arr);
+    std::cout << "Queue size: " << myQueue.size() << std::endl;
+    std::cout << "Front element: " << myQueue.front() << std::endl;
+    std::cout << "Back element: " << myQueue.back() << std::endl;
 
-    for (int num : arr) {
-        std::cout << num << " ";
+    std::cout << "Removing elements: ";
+    while (!myQueue.empty())
+    {
+        std::cout << myQueue.front() << " ";
+        myQueue.pop();
     }
-    std::cout << "\n";
+    std::cout << std::endl;
 
-    return 0;   
+    if (myQueue.empty())
+    {
+        std::cout << "The queue is now empty." << std::endl;
+    }
+
+    
+    
+
+
+
+    return 0;
 }
