@@ -71,7 +71,6 @@ void print6(int n)
        cout << endl;
        
     }
-    
 }
 void print7(int n)
 {
